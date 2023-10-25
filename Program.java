@@ -9,38 +9,38 @@ public class Program {
        //  Livro meuLivro = new Livro("Redes de Computadores", null, "Edt Brasil", 2023);
 
         ArrayList<Livro> livros =  new ArrayList<>();
-        Autor autor = new Autor();
-        Pesquisar pesrqisarServico = new Pesquisar();
 
-        Filtro filtro  = new  Filtro();
+        Livro livro = new Livro();
+        Autor autor =  new Autor("Leandro");
+        Autor autor2 =  new Autor("Leandro2");
+        
+        livro.setAno(2022);
+        livro.setEditora("Edit Brasil");
+        livro.setTitulo("Historia do Brasil");
+        livro.setAutor(autor2);
+        
+        livros.add(livro);
 
-        // filtro.setNomeAutor("Joedson");
-        filtro.setCategoria("LGBT");
-
-        autor = pesrqisarServico.pesquisar02(filtro);
-
-        if(autor != null){
-
-            livros =autor.getLivros();
-
-        // ler a lista e printa na tela
-            for (Livro livr : livros) {
-                System.out.println(livr.getAno()+" | "+livr.getCategoria()+" | "+livr.getEditora()+" | "+livr.getTitulo());
+        livro = new Livro();
+        
+        livro.setAno(2023);
+        livro.setEditora("Edit Terra Nova");
+        livro.setTitulo("Sol e Lua");
+        livro.setAutor(autor);
+        
+        livros.add(livro);
+        //buscando livros de um autor com o nome Leandro
+        for (Livro livr : livros) {
+            if(livr.getAutor().getNome().equals("Leandro")){
+                System.out.println("Ano: " + livr.getAno() + "\tCategoria: " + livr.getCategoria() + "\t\tEditora: "+livr.getEditora() + "\tTitulo: " + livr.getTitulo());
             }
-          
-
-        }else{
-              System.out.println("Autor não existe");
         }
 
-
-
-  
+        for (Livro livr : livros) {
+            if(livr.getCategoria().contains("categoria")){
+                System.out.println("Ano: " + livr.getAno() + "\tCategoria: " + livr.getCategoria() + "\t\tEditora: "+livr.getEditora() + "\tTitulo: " + livr.getTitulo());
+            }
+        }
         
-        
-        
-////        System.out.println("Título: " + meuLivro.getTitulo());
-////        System.out.println("Categoria: " + meuLivro.getCategoria());
-////        System.out.println(Livros.get(0));
     }
 }

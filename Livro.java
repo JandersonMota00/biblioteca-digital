@@ -1,43 +1,16 @@
 import java.util.ArrayList;
 
 public class Livro {
-
-    public int id;
-
-
-    public String titulo;
-    public ArrayList<Catrgorias> categoria;
-    public String editora;
-    public int ano;
-
-    Autor autor;
+    private String titulo;
+    private ArrayList<String> categoria;
+    private String editora;
+    private int ano;
+    private Autor autor;
 
     public Livro() { //Construtor
+        categoria = new ArrayList<>();
 
     }    
-
-
-
-
- public ArrayList<Catrgorias> getCategoria() {
-        return categoria;
-    }
-
-
-    public void setCategoria(ArrayList<Catrgorias> categoria) {
-        this.categoria = categoria;
-    }
-
-    
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-
 
     public String getTitulo() {
         return this.titulo;
@@ -47,7 +20,13 @@ public class Livro {
         this.titulo = titulo;
     }
 
+    public ArrayList<String> getCategoria() {
+        return this.categoria;
+    }
 
+    public void setCategoria(ArrayList<String> categoria) {
+        this.categoria = categoria;
+    }
 
     public String getEditora() {
         return this.editora;
@@ -63,5 +42,13 @@ public class Livro {
 
     public void setAno(int ano) {
         this.ano = ano;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
     }
 }
