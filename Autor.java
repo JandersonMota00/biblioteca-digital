@@ -1,45 +1,16 @@
-import java.util.ArrayList;
-
 public class Autor {
+    private String nome;
 
-    
-    public int id;
-    public String nome;
-    public ArrayList <Livro> livros;
-    
-
-
-    public Autor() { //Construtor
-    }
-
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-
-    public int getId() {
-        return id;
-    }
-
-
-    public ArrayList<Livro> getLivros() {
-        return livros;
-    }
-
-    public void setLivros(ArrayList<Livro> livros) {
-        this.livros = livros;
+    public Autor(String nome) { //Construtor
+        this.nome = nome;
     }
 
     public String getNome() {
         return this.nome;
     }
-
+    /*
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-
-
-
+    */
 }
